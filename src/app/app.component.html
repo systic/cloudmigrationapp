@@ -1,0 +1,8 @@
+<div class="container" [ngClass]="{'fix-scroll':showContent}">
+  <app-main-header *ngIf=" router.url === '/dashboard'" (callback)="callbackHeader($event)"></app-main-header>
+  
+  <div class="main-content add-box" [ngClass]="{'show-content':showContent, 'login-page':router.url === '/' || router.url === '/login'}">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" color="#fff" type="ball-spin"></ngx-spinner>

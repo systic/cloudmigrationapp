@@ -1,0 +1,78 @@
+// main-header
+.main-header {
+  height: 86px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  .logo {
+    width: 252px;
+    height: 61px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: url("../../../assets/i/logo.png");
+  }
+
+  .logged-user {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logger-card {
+      text-align: center;
+      padding-top: 14px;
+
+      .logger-name {
+        font-size: 14px;
+        text-align: center;
+        color: #b0afaf;
+        padding-top: 6px;
+      }
+    }
+  }
+
+  .header-opts {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+
+    .lnk-notification {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../../../assets/i/bell.png") -5px -5px no-repeat;
+      background-size: 28px 28px;
+    }
+
+    .lnk-settings {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../../../assets/i/setting.png") 0 0 no-repeat;
+      background-size: 18px 18px;
+      margin-left: 18px;
+    }
+
+    .lnk-logout {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../../../assets/i/logout.png") 0 0 no-repeat;
+      background-size: 18px 18px;
+      margin-left: 18px;
+    }
+  }
+
+  .viewport {
+    height: 86px;
+  }
+}

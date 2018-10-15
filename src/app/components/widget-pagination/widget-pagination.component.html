@@ -1,0 +1,9 @@
+<div class="showing-n-pagination">
+  <div class="pagination">
+    <a class="btn-rounded btn-prev" (click)="preFunc()" [class.disabled]="currentPage < pageList[pageList.length - 1]"><span class="caption">Prev</span></a>
+    <div class="page-numbers">
+      <a *ngFor="let page of pageList" class="count" [class.active]="currentPage===page" (click)="select(page)">{{page+1}}</a>
+    </div>
+    <a class="btn-rounded btn-next" (click)="nextFunc()" [class.disabled]="currentPage > 0"><span
+        class="caption">Next</span></a>
+  </div>

@@ -1,0 +1,83 @@
+<div class="dashboard-details">
+  <header class="customer-header">
+    <div class="viewport">
+      <a [routerLink]="['/dahsboard']" class="back">{{prop.logger || 'Lorem Customer 2'}}</a>
+
+      <span class="type type-{{prop.type || 'Discovery'}}"> <span class="ico">{{prop.type || 'Discovery'}}</span></span>
+    </div>
+  </header>
+  <!-- /.main-header -->
+  <div class="dashboard-details-content">
+    <aside class="aside">
+      <ul class="nav-list">
+        <li><a [routerLink]="['/dashboard-details']" class="nav-list-lnk lnk-summary">Summary</a></li>
+        <li><a [routerLink]="['/details-discovery']" class="nav-list-lnk lnk-discovery">Discovery</a></li>
+        <li><a [routerLink]="['/details-assessment']" class="nav-list-lnk lnk-assessment active">Assessment</a></li>
+        <li><a [routerLink]="['/details-migration']" class="nav-list-lnk lnk-migration">Migration</a></li>
+        <li><a [routerLink]="['/details-assurance']" class="nav-list-lnk lnk-assurance">Assurance</a></li>
+        <li class="sticky-b"><a class="nav-list-lnk lnk-view">View reports</a></li>
+      </ul>
+    </aside>
+    <div class="layout-has-sidear">
+      <div class="main-con-col">
+        <header class="subpage-heading">
+          <h2><span>Assessment</span></h2>
+          <div class="tagline">Select options bellow</div>
+        </header>
+
+        <div class="assessment-box">
+          <div class="assessment-card">
+            <span class="ico ico-pa"></span>
+            <h4>Pre - Assessment</h4>
+            <div class="desc">Initial phase where you collect details and preferences about customer</div>
+          </div>
+          <div class="assessment-card">
+            <span class="ico ico-ca"></span>
+            <h4>Create Assessment</h4>
+            <div class="desc">Launch assessment for customer and they need to login to answer</div>
+          </div>
+          <div class="assessment-card">
+            <span class="ico ico-re"></span>
+            <h4>Recommendation</h4>
+            <div class="desc">Detailed analysis based on information shared by the customer</div>
+          </div>
+        </div>
+        <!-- /.assessment-box -->
+      </div>
+      <!-- /.main-con-col -->
+
+      <aside class="rt-sidebar">
+        <div class="welcome">
+          <h3 class="hi">Hi <strong>{{db.discovery.username}}!</strong></h3>
+          <div class="welcome-msg">Welcome on Cloud Migration</div>
+        </div>
+
+        <div class="phase-details">
+          <h4>Phase 2 - Assessment</h4>
+          <div class="phase-desc">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut tempor pretium mauris sit
+              amet luctus quam congue non.</p>
+
+            <p>Nullam porta pellentesque massa donec eu mauris tellus suspendisse faucibus porttitor nunc at congue.</p>
+
+            <p>Quisque eros nunc, varius eget semper eget, imperdiet vitae orci. Pellentesque cursus massa at nunc
+              malesuada, vitae varius diam tempor.</p>
+          </div>
+        </div>
+
+        <div class="phase-details">
+          <h4>Need help</h4>
+          <div class="phase-desc">Please let us know if you need further assistance. </div>
+        </div>
+
+        <ul class="aside-links">
+          <li><a class="lnk lnk-tts">Talk to a expert</a></li>
+          <li><a class="lnk lnk-send-mail">Send us email</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- /.layout-has-sidear -->
+  </div>
+  <!-- /.dashboard-details-content -->
+</div>

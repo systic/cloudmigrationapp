@@ -1,0 +1,26 @@
+<main class="dashboard">
+  <h2 class="wipro-heading">All Customers</h2>
+
+  <div class="search-card">
+    <div class="search-bar">
+      <input type="search" class="text-ctrl text-search" placeholder="Search for customer.." (keyup)="updateFilterList($event)" />
+      <div class="result-list-card">
+        <div class="result-list-item" *ngFor="let item of state.profiles | paginate: { itemsPerPage: state.pagination.perPage, currentPage: state.pagination.page }; let i = index" >
+
+          <a class="profile-info" [routerLink]= "['/dashboard-details/'+item.fullName+'/'+item.type]">
+            <span class="short-name color-{{i%5}}">{{item.shortName}}</span>
+            <div class="fullname">{{item.fullName}}</div>
+          </a>
+          <span class="type type-{{item.type}}">{{item.type}}</span>
+
+        </div>
+
+      <div class="pagination">
+        <app-widget-pagination [items]="this.state.profiles.length" (paginationChange)="callBackPaginate($event)"></app-widget-pagination>
+      </div>
+
+      </div>
+      <!-- /.result-list-card -->
+    </div>
+  </div>
+</main>

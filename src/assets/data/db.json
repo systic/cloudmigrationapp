@@ -1,0 +1,70 @@
+{
+  "logger": "John Smith (Service Provider)",
+  "profiles": [
+    {
+      "id": 1,
+      "shortName": "AC",
+      "fullName": "Acme Customer 1",
+      "type": "Assessment"
+    },
+    {
+      "id": 2,
+      "shortName": "LC",
+      "fullName": "Lorem Customer 2",
+      "type": "Discovery"
+    },
+    {
+      "id": 3,
+      "shortName": "IC",
+      "fullName": "ipsum Customer 3",
+      "type": "Assessment"
+    },
+    {
+      "id": 1,
+      "shortName": "AC",
+      "fullName": "Acme Customer 4",
+      "type": "Assessment"
+    },
+    {
+      "id": 1,
+      "shortName": "AC",
+      "fullName": "Acme Customer 5",
+      "type": "Migration"
+    },
+    {
+      "id": 1,
+      "shortName": "AC",
+      "fullName": "Acme Customer 11",
+      "type": "Assessment"
+    },
+    {
+      "id": 2,
+      "shortName": "LC",
+      "fullName": "Lorem Customer 12",
+      "type": "Discovery"
+    },
+    {
+      "id": 3,
+      "shortName": "IC",
+      "fullName": "ipsum Customer 13",
+      "type": "Assessment"
+    },
+    {
+      "id": 1,
+      "shortName": "AC",
+      "fullName": "Acme Customer 14",
+      "type": "Assessment"
+    },
+    {
+      "id": 1,
+      "shortName": "AC",
+      "fullName": "Acme Customer 15",
+      "type": "Migration"
+    }
+
+  ],
+  "osVersions": [{ "data": [88, 77, 65, 66, 66], "label": "OS Versions"}],
+  "discovery": {
+    "username": "John"
+  }
+}

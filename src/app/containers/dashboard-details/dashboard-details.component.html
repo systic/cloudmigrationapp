@@ -1,0 +1,124 @@
+<div class="dashboard-details">
+  <header class="customer-header">
+    <div class="viewport">
+      <a [routerLink]="['/dahsboard']" class="back">{{prop.logger || 'Lorem Customer 2'}}</a>
+
+      <span class="type type-{{prop.type || 'Discovery'}}"> <span class="ico">{{prop.type || 'Discovery'}}</span></span>
+    </div>
+  </header>
+  <!-- /.main-header -->
+  <div class="dashboard-details-content">
+    <aside class="aside">
+      <ul class="nav-list">
+        <li><a [routerLink]="['/dashboard-details']" class="nav-list-lnk lnk-summary active">Summary</a></li>
+        <li><a [routerLink]="['/details-discovery']" class="nav-list-lnk lnk-discovery">Discovery</a></li>
+        <li><a [routerLink]="['/details-assessment']" class="nav-list-lnk lnk-assessment">Assessment</a></li>
+        <li><a [routerLink]="['/details-migration']" class="nav-list-lnk lnk-migration">Migration</a></li>
+        <li><a [routerLink]="['/details-assurance']" class="nav-list-lnk lnk-assurance">Assurance</a></li>
+        <li class="sticky-b"><a class="nav-list-lnk lnk-view">View reports</a></li>
+      </ul>
+    </aside>
+    <div class="main-section">
+      <div class="phase-bar">
+        <div class="heading-section">
+          <h3>Current Phase</h3>
+          <div class="type">{{prop.type}}</div>
+        </div>
+        <ul class="phases">
+          <li class="active">
+            <div class="phase phase-discovery"> <i class="ico"></i>
+              <div>Discovery</div>
+            </div>
+          </li>
+          <li>
+            <div class="phase phase-assessment"> <i class="ico"></i>
+              <div>Assessment</div>
+            </div>
+          </li>
+          <li>
+            <div class="phase phase-migration"> <i class="ico"></i>
+              <div>Migration</div>
+            </div>
+          </li>
+          <li>
+            <div class="phase phase-assurance"> <i class="ico"></i>
+              <div>Assurance</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="charts-group">
+        <div class="chart-section">
+          <h3>OS Versions</h3>
+          <figure id="radar-chart" class="chart radar-chart">
+            <app-chart-radar></app-chart-radar>
+          </figure>
+        </div>
+        <!-- /.chart-section -->
+        <div class="chart-section">
+          <h3>Key Tech Stacks</h3>
+          <figure id="radar-chart" class="chart radar-chart">
+            <!-- <jqxChart #myChart
+              [width]="getWidth()" [height]="500"
+              [title]="'Key Tech Stacks'"
+              [description]="''"
+              [showLegend]="false" [enableAnimations]="true" [padding]="padding"
+              [titlePadding]="titlePadding" [source]="dataAdapter" [xAxis]="xAxis"
+              [seriesGroups]="seriesGroups" [colorScheme]="'scheme02'">
+          </jqxChart> -->
+          </figure>
+        </div>
+        <!-- /.chart-section -->
+
+        <div class="chart-section">
+          <h3 class="blue">Workload</h3>
+          <figure id="radar-chart" class="chart radar-chart">
+            <!-- <jqxChart #myChart
+              [width]="getWidth()" [height]="500"
+              [title]="'Key Tech Stacks'"
+              [description]="''"
+              [showLegend]="false" [enableAnimations]="true" [padding]="padding"
+              [titlePadding]="titlePadding" [source]="dataAdapter" [xAxis]="xAxis"
+              [seriesGroups]="seriesGroups" [colorScheme]="'scheme02'">
+          </jqxChart> -->
+          </figure>
+        </div>
+        <!-- /.chart-section -->
+      </div>
+      <!-- /.charts-group -->
+
+      <div class="physical-vs-section">
+        <div class="vs-section">
+          <h3>Physical vs Virtual Server</h3>
+          <div class="vsc-con">
+
+            <div class="bar">
+              <div class="cell ps" [ngStyle] = "{'width': psvs.psPercent + '%'}">
+                <div class="status">{{psvs.ps}}
+                  <div class="lbl">Physical Server</div>
+                </div>
+              </div>
+              <div class="cell vs" [ngStyle] = "{'width': psvs.vsPercent + '%'}">
+                <div class="status">{{psvs.vs}}
+                  <div class="lbl">Virtual Server</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="env">
+          <h3>Environment</h3>
+          <div class="vsc-env">
+            <div class="bar-env">
+              <div class="cell" [ngStyle] = "{'width': env.devPercent + '%'}"> <div class="status">{{env.dev}} <div class="lbl">Dev</div> </div> </div>
+              <div class="cell" [ngStyle] = "{'width': env.testPercent + '%'}"> <div class="status">{{env.test}} <div class="lbl">Test</div> </div> </div>
+              <div class="cell" [ngStyle] = "{'width': env.prodPercent + '%'}"> <div class="status dark">{{env.prod}} <div class="lbl">Prod</div> </div> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.main-section -->
+  </div>
+  <!-- /.dashboard-details-content -->
+</div>

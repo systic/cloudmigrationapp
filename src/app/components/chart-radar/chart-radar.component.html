@@ -1,0 +1,13 @@
+<div class="chart-view">
+  <canvas id="radar-chart" baseChart
+      height="257"
+      [datasets]="radarChartData"
+      [labels]="radarChartLabels"
+      [chartType]="radarChartType"
+      [colors]="radarChartColors"
+      [options]=  "radarChartOptions"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"
+      
+    > </canvas>
+</div>
