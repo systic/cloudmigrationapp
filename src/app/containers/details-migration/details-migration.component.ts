@@ -5,7 +5,7 @@ import AppSvc from '../../services/application.service';
 
 @Component({
   selector: 'app-details-migration',
-  templateUrl: './details-migration.component.html']
+  templateUrl: './details-migration.component.html'
 })
 export class DetailsMigrationComponent implements OnInit {
 

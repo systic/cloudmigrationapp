@@ -5,7 +5,7 @@ import AppSvc from '../../services/application.service';
 
 @Component({
   selector: 'app-details-assurance',
-  templateUrl: './details-assurance.component.html']
+  templateUrl: './details-assurance.component.html'
 })
 export class DetailsAssuranceComponent implements OnInit {
 

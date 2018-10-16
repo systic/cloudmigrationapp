@@ -82,6 +82,11 @@
             background-position: 14px 15px;
             background-repeat: no-repeat;
             background-size: 28px 23px;
+            &.active{
+              background-image: url("./assets/i/al-s-a.svg");
+              background-position: 18px 15px;
+
+            }
           }
 
           &.lnk-discovery {
@@ -89,6 +94,11 @@
             background-position: 13px 14px;
             background-repeat: no-repeat;
             background-size: 30px 30px;
+            &.active{
+              background-image: url("./assets/i/al-d-a.svg");
+              background-position: 18px 15px;
+
+            }
           }
 
           &.lnk-assessment {
@@ -96,6 +106,11 @@
             background-position: 13px 14px;
             background-repeat: no-repeat;
             background-size: 26px 30px;
+            &.active{
+              background-image: url("./assets/i/as-a-a.svg");
+              background-position: 18px 15px;
+
+            }
           }
 
           &.lnk-migration {
@@ -103,13 +118,23 @@
             background-position: 13px 14px;
             background-repeat: no-repeat;
             background-size: 24px 26px;
+            &.active{
+              background-image: url("./assets/i/al-m-a.svg");
+              background-position: 18px 15px;
+
+            }
           }
 
           &.lnk-assurance {
             background-image: url("./assets/i/al-assu.svg");
             background-position: 18px 15px;
             background-repeat: no-repeat;
-            background-size: 22px 26px;
+            
+            &.active{
+              background-image: url("./assets/i/al-assu-a.svg");
+              background-position: 18px 15px;
+
+            }
           }
 
           &.lnk-view {

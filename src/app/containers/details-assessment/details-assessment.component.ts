@@ -5,7 +5,7 @@ import AppSvc from '../../services/application.service';
 
 @Component({
   selector: 'app-details-discovery',
-  templateUrl: './details-assessment.component.html']
+  templateUrl: './details-assessment.component.html'
 })
 export class DetailsAssessmentComponent implements OnInit {
 

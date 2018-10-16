@@ -21,6 +21,11 @@ const routes: Routes = [
     data: { title: 'Dashboard Details' }
   },
   {
+    path: 'dashboard-details',
+    component: DashboardDetailsComponent,
+    data: { title: 'Dashboard Details' }
+  },
+  {
     path: 'details-discovery',
     component: DetailsDiscoveryComponent,
     data: { title: 'Discovery' }

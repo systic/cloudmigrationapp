@@ -13,13 +13,18 @@ export class DashboardDetailsComponent implements OnInit {
 
   public psvs: any = {
     ps: 175,
-    vs: 1000
+    vs: 1000,
+    psPercent: 0,
+    vsPercent: 0
   };
 
   public env: any = {
     dev: 200,
     test: 400,
-    prod: 400
+    prod: 400,
+    devPercent: 0,
+    testPercent: 0,
+    prodPercent: 0
   };
 
   source: any =
@@ -46,15 +51,16 @@ export class DashboardDetailsComponent implements OnInit {
   ngOnInit() {
     this.prop.logger = this.router.snapshot.params['username'];
     this.prop.type = this.router.snapshot.params['type'];
-
-    this.psvs.psPercent = parseInt(this.psvs.ps / (this.psvs.ps + this.psvs.vs) * 100, 10);
+/* tslint:disable */
+    this.psvs.psPercent = this.psvs.ps / (this.psvs.ps + this.psvs.vs) * 100;
     this.psvs.vsPercent = 100 - this.psvs.psPercent;
 
     const envSum = this.env.dev + this.env.test + this.env.prod;
-    this.env.devPercent = parseInt(this.env.dev / envSum * 100, 10);
-    this.env.testPercent = parseInt(this.env.test / envSum * 100, 10);
-    this.env.prodPercent = parseInt(this.env.prod / envSum * 100, 10);
-  };
+    this.env.devPercent =  this.env.dev / envSum * 100;
+    this.env.testPercent = this.env.test / envSum * 100;
+    this.env.prodPercent = this.env.prod / envSum * 100;
+    /* tslint:enable */
+  }
 }
 
-}
+
